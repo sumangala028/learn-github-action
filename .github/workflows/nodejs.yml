@@ -28,7 +28,9 @@ jobs:
 #       run: git clone https://github.com/sumangala028/learn-github-action.git
 #     - name: Go to the project folder
 #       run: cd ./hello-world
+    - name: install dep
       working-directory: ./hello-world
+      run: npm install
     - name: Build the files
       run: npm run build
 
