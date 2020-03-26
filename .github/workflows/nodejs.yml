@@ -32,6 +32,7 @@ jobs:
       working-directory: ./hello-world
       run: npm install
     - name: Build the files
+      working-directory: ./hello-world
       run: npm run build
 
     
