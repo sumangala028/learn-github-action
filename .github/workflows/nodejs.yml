@@ -7,7 +7,6 @@ on:
   push:
     branches: [ master ]
   pull_request:
-    branches: [ master ]
 
 jobs:
   build:
@@ -25,12 +24,10 @@ jobs:
       uses: actions/setup-node@v1
       with: 
         node-version: ${{matrix.node-version}}
-    - name: clone the repo
-      run: git clone https://github.com/sumangala028/learn-github-action.git
+#     - name: clone the repo
+#       run: git clone https://github.com/sumangala028/learn-github-action.git
     - name: Go to the project folder
-      run: |
-          cd learn-github-action
-          cd hello-world
+      run: cd hello-world
     - name: Build the files
       run: npm build
 
