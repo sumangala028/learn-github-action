@@ -34,7 +34,7 @@ jobs:
     - name: Build the files
       working-directory: ./hello-world
       run: npm run build
-      - name: Clone a repo
+    - name: Clone a repo
       run: |
         git config --global user.email "sumangala028@gmail.com"
         git config --global user.name "sumangala028"
