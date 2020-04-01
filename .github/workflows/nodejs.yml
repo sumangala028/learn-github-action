@@ -42,16 +42,16 @@ jobs:
         git clone https://github.com/sumangala028/sample-repo.git
         
         cd sample-repo
-        echo hello >> README.md
+        git checkout -b sampleBranch
         echo "" >> README.md
+        echo "Hello Sample!" >> README.md
         
         git add --all
-        git commit -m "README updated
-        git push origin master
-        echo 'Successfully change the README.'
-        
+        git commit -m "README updated"
+        git push origin sampleBranch
+                
         sudo snap install hub --classic
-        hub pull-request -m 'This is an automated pull request'
+        hub pull-request -m "Update Readme" -b sumangala028:master -h sumangala028:sampleBranch
         echo 'Successfully sent a pull request to sample.git'
         
         
