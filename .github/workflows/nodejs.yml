@@ -45,7 +45,7 @@ jobs:
         echo hello >> README.md
         echo "" >> README.md
         
-        git add .
+        git add --all
         git commit -m "README updated
         git push origin master
         echo 'Successfully change the README.'
@@ -56,8 +56,3 @@ jobs:
         
         
         
-
-    
-      
-      
- 
