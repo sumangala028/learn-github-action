@@ -39,7 +39,7 @@ jobs:
         git config --global user.email "sumangala028@gmail.com"
         git config --global user.name "sumangala028"
         
-        git remote set url origin git@github.com:sumangala028/sample-repo.git
+        git remote set-url origin git@github.com:sumangala028/sample-repo.git
         
         cd sample-repo
         git checkout -b sampleBranch
