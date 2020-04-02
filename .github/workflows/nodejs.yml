@@ -47,7 +47,7 @@ jobs:
         echo "Hello Sample!" >> README.md
         
         git add --all
-        git commit -m "README updated"
+        git commit -m "README updated."
         git push origin sampleBranch
                 
         sudo snap install hub --classic
