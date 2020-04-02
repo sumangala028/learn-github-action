@@ -36,6 +36,8 @@ jobs:
 #       working-directory: ./hello-world
 #       run: npm run build
     - name: Clone the repo
+      env:
+        GITHUB_TOKEN: ${{ secrets.SECRET_2A }}
       run: |
         git clone https://github.com/sumangala028/sample-repo.git
         
