@@ -35,13 +35,9 @@ jobs:
     - name: Build the files
       working-directory: ./hello-world
       run: npm run build
-    - name: Accesss Token
-      with: 
-        repo-token: ${{ secrets.SECRET_J }}
     - name: Clone the repo
       run: |
         git clone https://github.com/sumangala028/sample-repo.git
-      
         
         cd sample-repo
         git checkout -b sampleBranch
@@ -55,7 +51,8 @@ jobs:
         git add --all
         git commit -m "README updated."
         
-        git remote set-url origin git@github.com:sumangala028/sample-repo.git
+        git remote set-url origin https://sumangala028:${{ secrets.SECRET_J }}@github.com/sumangala028/sample-repo.git
+
         git push origin sampleBranch
                 
         sudo snap install hub --classic
