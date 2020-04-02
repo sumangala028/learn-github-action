@@ -29,12 +29,12 @@ jobs:
 #       run: git clone https://github.com/sumangala028/learn-github-action.git
 #     - name: Go to the project folder
 #       run: cd ./hello-world
-    - name: install dep
-      working-directory: ./hello-world
-      run: npm install
-    - name: Build the files
-      working-directory: ./hello-world
-      run: npm run build
+#     - name: install dep
+#       working-directory: ./hello-world
+#       run: npm install
+#     - name: Build the files
+#       working-directory: ./hello-world
+#       run: npm run build
     - name: Clone the repo
       run: |
         git clone https://github.com/sumangala028/sample-repo.git
@@ -50,10 +50,8 @@ jobs:
         
         git add --all
         git commit -m "README updated."
-        
-        git remote set-url origin https://${{secrets.SECRET_PERMISSION}}@github.com/sumangala028/sample-repo.git
        
-        git push origin sampleBranch
+        git push https://${{secrets.SECRET_PERMISSION}}@github.com/sumangala028/sample-repo.git sampleBranch
                 
         sudo snap install hub --classic
         hub pull-request -m "Update Readme" -b sumangala028:master -h sumangala028:sampleBranch
