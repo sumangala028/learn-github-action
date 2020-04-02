@@ -20,9 +20,7 @@ jobs:
     steps:
     - name: Check out repository
       uses: actions/checkout@v2
-      with: 
-        repo-token: ${{ secrets.SECRET_J }}
-        
+      
     - name: Setup nodeJS
       uses: actions/setup-node@v1
       with: 
@@ -40,6 +38,9 @@ jobs:
     - name: Clone a repo
       run: |
         git clone https://github.com/sumangala028/sample-repo.git
+        with: 
+        repo-token: ${{ secrets.SECRET_J }}
+        
                
         cd sample-repo
         git checkout -b sampleBranch
