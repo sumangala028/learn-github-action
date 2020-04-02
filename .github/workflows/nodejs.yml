@@ -53,7 +53,6 @@ jobs:
         git add --all
         git commit -m "README updated."
         echo ${{secrets.SECRET_PERMISSION}}
-        git push https://${{secrets.SECRET_2A}}@github.com/sumangala028/sample-repo.git sampleBranch
                 
         sudo snap install hub --classic
         hub pull-request -m "Update Readme" -b sumangala028:master -h sumangala028:sampleBranch
