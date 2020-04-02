@@ -36,10 +36,11 @@ jobs:
       run: npm run build
     - name: Clone a repo
       run: |
-        git config --global user.email "sumangala028@gmail.com"
-        git config --global user.name "sumangala028"
+        git config user.email "sumangala028@gmail.com"
+        git config user.name "sumangala028"
         
         git remote set-url origin git@github.com:sumangala028/sample-repo.git
+        git clone https://github.com/sumangala028/learn-github-action.git
         
         cd sample-repo
         git checkout -b sampleBranch
@@ -48,7 +49,8 @@ jobs:
         
         git add --all
         git commit -m "README updated."
-        git push origin -f sampleBranch
+        git remote set-url origin git@github.com:sumangala028/sample-repo.git
+        git push origin sampleBranch
                 
         sudo snap install hub --classic
         hub pull-request -m "Update Readme" -b sumangala028:master -h sumangala028:sampleBranch
