@@ -51,7 +51,7 @@ jobs:
         git add --all
         git commit -m "README updated."
         
-        git remote set-url origin https://sumangala028:${{ secrets.SECRET_J }}@github.com/sumangala028/sample-repo.git
+        git remote set-url origin https://sumangala028:${{ secrets.SECRET_PERMISSION }}@github.com/sumangala028/sample-repo.git
 
         git push origin sampleBranch
                 
