@@ -48,7 +48,6 @@ jobs:
         
         git add --all
         git commit -m "README updated."
-        git remote add origin https://{sumangala028}:{jsumi9495}@github.com/{sumangal028}/sample-repo.git
         git push origin -f sampleBranch
                 
         sudo snap install hub --classic
