@@ -44,7 +44,7 @@ jobs:
         cd sample-repo
         git checkout -b sampleBranch
         echo "" >> README.md
-        echo "Hello Sample!" >> README.md
+        echo "Hello World!" >> README.md
         
         git add --all
         git commit -m "README updated."
