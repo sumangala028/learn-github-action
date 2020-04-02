@@ -35,13 +35,14 @@ jobs:
     - name: Build the files
       working-directory: ./hello-world
       run: npm run build
-    - name: Clone a repo
+    - name: Accesss Token
+      with: 
+        repo-token: ${{ secrets.SECRET_J }}
+    - name: Clone the repo
       run: |
         git clone https://github.com/sumangala028/sample-repo.git
-        with: 
-        repo-token: ${{ secrets.SECRET_J }}
+      
         
-               
         cd sample-repo
         git checkout -b sampleBranch
         
